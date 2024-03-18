@@ -5,7 +5,18 @@ import "./style.css";
 import "./assets/img/rigo-baby.jpg";
 import "./assets/img/4geeks.ico";
 
-window.onload = function() {
-  //write your code here
-  console.log("Hello Rigo from the console!");
+window.onload = () => {
+  document.querySelector(".card").classList.add(generadorIcons());
+  document.querySelector(".card").innerHTML = genNumeros();
+};
+let generadorIcons = () => {
+  let listIcons = ["diamond", "heart", "spade", "club"];
+  let randomIcon = Math.floor(Math.random() * listIcons.length);
+  return listIcons[randomIcon];
+};
+
+let genNumeros = () => {
+  let numero = ["2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K"];
+  let randomNumber = Math.floor(Math.random() * numero.length);
+  return numero[randomNumber];
 };
