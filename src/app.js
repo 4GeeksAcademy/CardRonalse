@@ -6,9 +6,10 @@ import "./assets/img/rigo-baby.jpg";
 import "./assets/img/4geeks.ico";
 
 window.onload = () => {
-  document.querySelector(".card").classList.add(generadorIcons());
-  document.querySelector(".card").innerHTML = genNumeros();
+  document.querySelector(".cartas").classList.add(generadorIcons());
+  document.querySelector(".cartas").innerHTML = genNumeros();
 };
+
 let generadorIcons = () => {
   let listIcons = ["diamond", "heart", "spade", "club"];
   let randomIcon = Math.floor(Math.random() * listIcons.length);
